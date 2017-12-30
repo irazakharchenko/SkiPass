@@ -1,7 +1,8 @@
 public interface SkiPass {
 
-    int counter = 0;
-    static int counter_id = 0;
-    int id = 0;
-    String day_start = "";
+    String get_skipass_type();
+    String getDay_start();
+    String today();
+    void minus_counter();
+    boolean check_counter();
 }

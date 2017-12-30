@@ -1,5 +1,5 @@
-public enum WorkDays {
-    DAY1,DAYS2, DAYS5, HOISTS10, HOISTS20, HOISTS50, HOISTS100;
+public enum KindSkiPass {
+    DAY1,DAYS2, DAYS5, HOISTS10, HOISTS20, HOISTS50, HOISTS100, SUBSCRIPTION;
 
     int toInt(){
         switch (this){
@@ -10,7 +10,8 @@ public enum WorkDays {
             case HOISTS20: return 20;
             case HOISTS50: return 50;
             case HOISTS100: return 100;
-            default: return 10;
+            case SUBSCRIPTION: return 1000;
+            default: return 0;
         }
     }
 
@@ -23,8 +24,8 @@ public enum WorkDays {
             case HOISTS20: return "hoist";
             case HOISTS50: return "hoist";
             case HOISTS100: return "hoist";
-            default: return null;
+            case SUBSCRIPTION: return "subscription";
+            default: return "hoist";
         }
     }
-
 }
