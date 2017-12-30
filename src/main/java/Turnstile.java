@@ -1,4 +1,6 @@
 public class Turnstile {
+
+
     private boolean canMove(SkiPassFather sp){
         if(sp.isBan())
             return false;

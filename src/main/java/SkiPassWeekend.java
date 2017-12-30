@@ -1,7 +1,4 @@
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
-public class SkiPassWeekend extends SkiPassFather {
+class SkiPassWeekend extends SkiPassFather {
     private KindSkiPass skipass_type ;
     private int counter;
     private static int counter_id;
