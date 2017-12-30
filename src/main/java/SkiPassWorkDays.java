@@ -1,4 +1,4 @@
-public class SkiPassForDays implements SkiPass {
+public class SkiPassWorkDays implements SkiPass {
 
     public void getrides() {
 
