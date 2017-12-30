@@ -7,6 +7,11 @@ public class SkiPassFather implements SkiPass {
     private static int counter_id;
     private int id = counter_id++;
     private String day_start = "";
+
+    public boolean isBan() {
+        return ban;
+    }
+
     private boolean ban = false;
 
 
@@ -27,11 +32,15 @@ public class SkiPassFather implements SkiPass {
     }
 
     public void minus_counter(){
-        if(check_counter())
+
             counter--;
     }
 
     public boolean check_counter(){
         return counter>0 && !ban;
+    }
+    public void make_day_start_today(){
+        minus_counter();
+        day_start = today();
     }
 }
