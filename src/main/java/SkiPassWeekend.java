@@ -2,29 +2,30 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class SkiPassWeekend implements SkiPass {
-    private Weekend skipass_type;
+    private Weekend skipass_type ;
     private int counter;
     private static int counter_id;
     private int id = counter_id++;
-    private String day_start = null;
+    private String day_start = "";
 
     public SkiPassWeekend(Weekend type){
         this.skipass_type = type;
         this.counter = type.toInt();
     }
 
-    public void getrides() {
-
+    public String get_skipass_type(){
+         return skipass_type.skipass_type();
     }
 
-    public void getdays() {
-
+    public String getDay_start(){
+        return day_start;
     }
 
     public boolean canMove(){
+
         switch (skipass_type.skipass_type()){
             case "day":
-                if (!day_start.equals(null)) {
+                if (!day_start.equals("")) {
                     if(!day_start.equals(today())) {
                         if (counter > 0){
                             counter--;
@@ -34,9 +35,9 @@ public class SkiPassWeekend implements SkiPass {
                         else
                             return false;
                     }
-                    else{
+                    else
                         return true;
-                    }
+
                 } else {
                     day_start = today();
                     return true;
@@ -55,11 +56,20 @@ public class SkiPassWeekend implements SkiPass {
             default: return false;
         }
 
+
     }
 
     public String today(){
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         LocalDate localDate = LocalDate.now();
         return dtf.format(localDate);
+    }
+
+    public void minus_counter(){
+        counter--;
+    }
+
+    public boolean check_counter(){
+        return counter>0;
     }
 }

@@ -10,7 +10,7 @@ public enum Weekend {
             case HOISTS50: return 50;
             case HOISTS100: return 100;
             case SUBSCRIPTION: return 1000;
-            default: return 10;
+            default: return 0;
         }
     }
 
@@ -23,7 +23,7 @@ public enum Weekend {
             case HOISTS50: return "hoist";
             case HOISTS100: return "hoist";
             case SUBSCRIPTION: return "subscription";
-            default: return null;
+            default: return "hoist";
         }
     }
 }

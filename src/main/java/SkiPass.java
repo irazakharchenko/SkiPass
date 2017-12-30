@@ -1,5 +1,7 @@
 public interface SkiPass {
 
-    public void getrides();
-    public void getdays();
+    int counter = 0;
+    static int counter_id = 0;
+    int id = 0;
+    String day_start = "";
 }
