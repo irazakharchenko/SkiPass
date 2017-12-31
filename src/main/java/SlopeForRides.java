@@ -20,11 +20,11 @@ public class SlopeForRides implements StrategySlope{
 
     @Override
     public String end_skipass() {
-        return "You have "+ slides_left+ " slides left, till "+ date_start;
+        return "You have "+ slides_left+ " slides left, till end of"+ date_start;
     }
 
     public void minus(){
-
+        slides_left--;
     }
 
 }
