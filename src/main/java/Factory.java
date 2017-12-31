@@ -1,3 +1,3 @@
 public interface Factory {
-    SkiPassFather makeSkipass(KindSkiPass ksp);
+    SkiPass makeSkipass(KindSkiPass ksp);
 }

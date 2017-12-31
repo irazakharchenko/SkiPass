@@ -1,4 +1,4 @@
-class SkiPassWeekend extends SkiPassFather {
+class SkiPassWeekend extends SkiPass {
     private KindSkiPass skipass_type ;
     private int counter;
     private static int counter_id;
@@ -19,16 +19,16 @@ class SkiPassWeekend extends SkiPassFather {
         switch (skipass_type.skipass_type()){
             case "day":
                 if (!day_start.equals("")) {
-                    if(!day_start.equals(today())) {
-                        if (counter > 0){
-                            counter--;
-                            //day_start = today();
-                            return true;
-                        }
-                        else
-                            return false;
-                    }
-                    else
+//                    if(!day_start.equals(today())) {
+//                        if (counter > 0){
+//                            counter--;
+//                            //day_start = today();
+//                            return true;
+//                        }
+//                        else
+//                            return false;
+//                    }
+//                    else
                         return true;
                 } else {
                     //day_start = today();

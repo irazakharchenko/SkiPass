@@ -1,4 +1,4 @@
-class SkiPassWorkDays extends SkiPassFather {
+class SkiPassWorkDays extends SkiPass {
     private KindSkiPass skipass_type ;
     private int counter;
     private static int counter_id;

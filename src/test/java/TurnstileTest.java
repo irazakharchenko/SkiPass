@@ -1,17 +1,16 @@
-import org.junit.Before;
 import org.junit.Test;
 
 
 
 class TurnstileTest {
-    FactoryWeekend fw = new FactoryWeekend();
+    FactorySkiPass fw = new FactorySkiPass();
     Turnstile t = new Turnstile();
 
 
     @Test
     void want_go() {
 
-        SkiPassFather sp = fw.makeSkipass(KindSkiPass.DAY1);
+        SkiPass sp = fw.makeSkipass(KindSkiPass.DAY1);
         t.want_go(sp);
     }
 
