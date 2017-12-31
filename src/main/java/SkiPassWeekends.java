@@ -6,5 +6,7 @@ public class SkiPassWeekends extends StrategyTypeDays {
 
     }
 
-
+    public boolean can_lift(Date today){
+        return today.getWeekday() > 4 && can_go_up(today);
+    }
 }

@@ -1,16 +1,23 @@
 public class Turnstile {
+    private Date today = new Date();
 
-
-    private boolean canMove(SkiPass sp){
-        if(sp.isBan())
-            return false;
-        return true;
+    public Date getToday() {
+        return today;
     }
 
-    public void want_go(SkiPass sp){
-        if(canMove(sp))
+    public void setToday(Date today) {
+        this.today = today;
+    }
+
+    private boolean canMove(StrategyTypeDays std) {
+        return std.can_go_up(today);
+    }
+
+    public void want_go(StrategyTypeDays std) {
+        if (canMove(std)) {
+            std.minus();
             System.out.println("Congratulations!");
-        else
+        } else
             System.out.println("You can't go sorry.");
     }
 }

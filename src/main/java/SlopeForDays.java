@@ -18,4 +18,9 @@ public class SlopeForDays implements  StrategySlope{
     public String end_skipass() {
         return "You can slide till " + day_end.toString();
     }
+
+    @Override
+    public void minus() {
+
+    }
 }
