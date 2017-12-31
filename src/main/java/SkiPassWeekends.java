@@ -5,4 +5,6 @@ public class SkiPassWeekends extends StrategyTypeDays {
             slope = new SlopeForSeason(ksp,today);
 
     }
+
+
 }

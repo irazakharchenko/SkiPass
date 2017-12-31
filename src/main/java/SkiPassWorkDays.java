@@ -3,4 +3,10 @@ public class SkiPassWorkDays extends StrategyTypeDays{
         super(ksp,today);
 
     }
+
+    public boolean can_lift(Date today){
+        return today.getWeekday() < 5 && can_go_up(today);
+    }
+
+
 }

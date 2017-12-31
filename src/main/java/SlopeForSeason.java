@@ -2,7 +2,7 @@ public class SlopeForSeason implements StrategySlope {
 
     private SkiPass skiPass;
     private KindSkiPass kindSkiPass;
-    Date day_end ;
+    private Date day_end ;
     public SlopeForSeason(KindSkiPass ksp, Date today){
         skiPass = new SkiPass();
         kindSkiPass = ksp;
@@ -17,5 +17,10 @@ public class SlopeForSeason implements StrategySlope {
     @Override
     public String end_skipass() {
         return "You can slide till " + day_end.toString();
+    }
+
+    @Override
+    public void minus() {
+
     }
 }

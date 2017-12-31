@@ -1,3 +1,4 @@
+import java.util.Calendar;
 import java.util.Random;
 
 public class Date{
@@ -25,8 +26,16 @@ public class Date{
         this.year = year;
     }
 
-    private int day, month, year;
+    private int day;
+    private int month;
+    private int year;
+    private int weekday;
     private final Random random = new Random();
+
+    public int getWeekday() {
+        return weekday;
+    }
+
     public Date(){
         day = random.nextInt(31) ;
         month = random.nextInt(12)  ;
@@ -37,6 +46,7 @@ public class Date{
         this.day = day;
         this.month = month;
         this.year = year;
+        weekday = day%7;
     }
 
     public boolean before(Date other){

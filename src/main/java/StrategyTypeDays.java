@@ -26,4 +26,11 @@ abstract class StrategyTypeDays implements StrategySlope{
     public String end_skipass() {
         return slope.end_skipass();
     }
+
+    public void minus() {
+        slope.minus();
+    }
+
+
+
 }
