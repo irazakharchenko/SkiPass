@@ -1,12 +1,12 @@
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 
-abstract class SkiPassFather {
+class SkiPassFather {
     private KindSkiPass skipass_type ;
     private int counter;
     private static int counter_id;
     private int id = counter_id++;
     private String day_start = "";
+
 
     public boolean isBan() {
         return ban;
@@ -22,14 +22,14 @@ abstract class SkiPassFather {
         return day_start;
     }
 
-    public String today(){
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-        LocalDate localDate = LocalDate.now();
-        return dtf.format(localDate);
+    public int today(){
+        Calendar cal = Calendar.getInstance();
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+
+        return day;
     }
 
     public void minus_counter(){
-
             counter--;
     }
 
@@ -39,6 +39,14 @@ abstract class SkiPassFather {
 
     public void make_day_start_today(){
         minus_counter();
-        day_start = today();
+        //day_start = today();
+    }
+
+    public static void main(String[] args) {
+        Calendar cal = Calendar.getInstance();
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        cal.add(Calendar.DAY_OF_MONTH, -3);
+        int dsay1 = cal.get(Calendar.DAY_OF_MONTH);
+        System.out.println(cal.before(cal) +" "+ day);
     }
 }

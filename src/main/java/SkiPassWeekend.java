@@ -13,7 +13,6 @@ class SkiPassWeekend extends SkiPassFather {
         this.counter = type.toInt();
     }
 
-
     public boolean canMove(){
         if(ban)
             return false;
@@ -23,7 +22,7 @@ class SkiPassWeekend extends SkiPassFather {
                     if(!day_start.equals(today())) {
                         if (counter > 0){
                             counter--;
-                            day_start = today();
+                            //day_start = today();
                             return true;
                         }
                         else
@@ -31,13 +30,10 @@ class SkiPassWeekend extends SkiPassFather {
                     }
                     else
                         return true;
-
                 } else {
-                    day_start = today();
+                    //day_start = today();
                     return true;
-
                 }
-
             case "hoist":
                 if (counter > 0){
                     counter--;
@@ -50,10 +46,6 @@ class SkiPassWeekend extends SkiPassFather {
             default: return false;
         }
 
-
     }
-
-
-
 
 }
