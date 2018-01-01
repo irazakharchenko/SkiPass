@@ -1,11 +1,11 @@
-public class Turnstile {
+class Turnstile {
     private Date today = new Date();
 
-    public Date getToday() {
+    Date getToday() {
         return today;
     }
 
-    public void setToday(Date today) {
+    void setToday(Date today) {
         this.today = today;
     }
 
@@ -13,10 +13,11 @@ public class Turnstile {
         return std.can_lift(today);
     }
 
-    public boolean want_go(StrategyTypeDays std) {
+    boolean want_go(StrategyTypeDays std) {
         if (canMove(std)) {
             std.minus();
             System.out.println("Congratulations!");
+            System.out.println(std.end_skipass());
             return true;
         } else
             System.out.println("You can't go sorry.");

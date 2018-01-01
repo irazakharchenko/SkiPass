@@ -2,37 +2,13 @@ import java.util.Calendar;
 import java.util.Random;
 
 public class Date{
-    public int getDay() {
-        return day;
-    }
-
-    public void setDay(int day) {
-        this.day = day;
-    }
-
-    public int getMonth() {
-        return month;
-    }
-
-    public void setMonth(int month) {
-        this.month = month;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
     private int day;
     private int month;
     private int year;
     private int weekday;
     private final Random random = new Random();
 
-    public int getWeekday() {
+    int getWeekday() {
         return weekday;
     }
 
@@ -49,7 +25,7 @@ public class Date{
         weekday = day%7;
     }
 
-    public boolean before(Date other){
+    boolean before(Date other){
         // if dates equal return true
         if(other.year > year )
             return true;
@@ -68,7 +44,7 @@ public class Date{
         }
         return false;
     }
-    public Date add_day(int number_days){
+    Date add_day(int number_days){
         int da,m,y;
         da = (day+number_days ) % 30;
         m = (month + (day+number_days ) / 30)%12;
@@ -76,20 +52,20 @@ public class Date{
         return new Date(da, m,y);
     }
 
-    public Date add_season(){
+    Date add_season(){
         int m,y;
         m = (month + 3)%12;
         y = year + (month + 3)/12;
         return new Date(day, m,y);
     }
 
-    public boolean equal(Date other){
+    boolean equal(Date other){
         return year == other.year && day == other.day && month == other.month;
     }
 
     @Override
     public String toString() {
-        return day+1+ "/"+(month+1)+ "/"+year;
+        return day+ "/"+(month)+ "/"+year;
     }
 
 
