@@ -5,8 +5,10 @@ public class SlopeForRides implements StrategySlope{
     private Date date_start;
 
     public SlopeForRides(KindSkiPass ksp, Date date){
+        skiPass = new SkiPass();
         kindSkiPass = ksp;
         date_start = date;
+        slides_left = ksp.toInt();
     }
 
     public int getSlides_left() {
