@@ -2,8 +2,9 @@ public class SlopeForSeason implements StrategySlope {
 
     private SkiPass skiPass;
     private KindSkiPass kindSkiPass;
-    private Date day_end ;
-    public SlopeForSeason(KindSkiPass ksp, Date today){
+    private Date day_end;
+
+    SlopeForSeason(KindSkiPass ksp, Date today) {
         skiPass = new SkiPass();
         kindSkiPass = ksp;
         day_end = today.add_season();

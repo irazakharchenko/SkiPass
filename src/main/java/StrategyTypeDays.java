@@ -1,15 +1,15 @@
-abstract class StrategyTypeDays implements StrategySlope{
+abstract class StrategyTypeDays implements StrategySlope {
 
-    protected StrategySlope slope;
+    StrategySlope slope;
 
-    public StrategyTypeDays(KindSkiPass ksp, Date today){
-        switch (ksp.skipass_type()){
-            case "day":{
+    StrategyTypeDays(KindSkiPass ksp, Date today) {
+        switch (ksp.skipass_type()) {
+            case "day": {
                 slope = new SlopeForDays(ksp, today);
                 break;
             }
-            case "hoist":{
-                slope = new SlopeForRides(ksp,today);
+            case "hoist": {
+                slope = new SlopeForRides(ksp, today);
                 break;
             }
             default:

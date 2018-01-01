@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
-public class FactorySkiPass {
+class FactorySkiPass {
     private ArrayList<SkiPass> mass = new ArrayList<>();
 
-    public FactorySkiPass() {
+    FactorySkiPass() {
 
     }
 
-    public StrategyTypeDays makeSkipass(boolean weekends, String type_sp, int number, Date today) {
+    StrategyTypeDays makeSkipass(boolean weekends, String type_sp, int number, Date today) {
         KindSkiPass ksp;
         switch (type_sp) {
             case "day": {
@@ -60,13 +60,13 @@ public class FactorySkiPass {
                 ksp = KindSkiPass.SUBSCRIPTION;
                 break;
             }
-            default:{
+            default: {
                 ksp = KindSkiPass.HOISTS10;
                 break;
             }
 
         }
-        if(weekends){
+        if (weekends) {
             return new SkiPassWeekends(ksp, today);
         }
         return new SkiPassWorkDays(ksp, today);

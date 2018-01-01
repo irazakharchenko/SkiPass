@@ -1,8 +1,9 @@
-public class SlopeForDays implements  StrategySlope{
+public class SlopeForDays implements StrategySlope {
+    private Date day_end;
     private SkiPass skiPass;
     private KindSkiPass kindSkiPass;
-    Date day_end ;
-    public SlopeForDays(KindSkiPass ksp, Date today){
+
+    SlopeForDays(KindSkiPass ksp, Date today) {
         skiPass = new SkiPass();
         kindSkiPass = ksp;
         day_end = today.add_day(ksp.toInt());
