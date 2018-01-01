@@ -10,14 +10,16 @@ public class Turnstile {
     }
 
     private boolean canMove(StrategyTypeDays std) {
-        return std.can_go_up(today);
+        return std.can_lift(today);
     }
 
-    public void want_go(StrategyTypeDays std) {
+    public boolean want_go(StrategyTypeDays std) {
         if (canMove(std)) {
             std.minus();
             System.out.println("Congratulations!");
+            return true;
         } else
             System.out.println("You can't go sorry.");
+        return false;
     }
 }

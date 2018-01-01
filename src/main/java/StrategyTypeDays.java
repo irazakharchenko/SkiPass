@@ -4,7 +4,7 @@ abstract class StrategyTypeDays implements StrategySlope{
 
     public StrategyTypeDays(KindSkiPass ksp, Date today){
         switch (ksp.skipass_type()){
-            case "date":{
+            case "day":{
                 slope = new SlopeForDays(ksp, today);
                 break;
             }
@@ -31,6 +31,6 @@ abstract class StrategyTypeDays implements StrategySlope{
         slope.minus();
     }
 
-
+    public abstract boolean can_lift(Date today);
 
 }

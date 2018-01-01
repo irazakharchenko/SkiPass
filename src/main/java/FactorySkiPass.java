@@ -25,7 +25,7 @@ public class FactorySkiPass {
                         break;
                     }
                     default: {
-                        ksp = KindSkiPass.DAY1;
+                        ksp = KindSkiPass.HOISTS10;
                         break;
                     }
                 }
