@@ -10,6 +10,8 @@ public class StrategyTypeDaysTest {
     @Test
     public void end_skipass() throws Exception {
         assertEquals("You have 10 slides left, till end of 1/1/2018", std.end_skipass());
+        assertEquals(13, std.getSkiPassID());
+        assertEquals(15, std1.getSkiPassID());
         assertEquals(true,  std.getSkiPassID() >= 0);
         assertEquals(true, std1.getSkiPassID() >= 1);
         std.minus();
