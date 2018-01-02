@@ -17,6 +17,10 @@ abstract class StrategyTypeDays implements StrategySlope {
         }
     }
 
+    public StrategySlope getSlope() {
+        return slope;
+    }
+
     @Override
     public boolean can_go_up(Date today) {
         return slope.can_go_up(today);
@@ -32,5 +36,10 @@ abstract class StrategyTypeDays implements StrategySlope {
     }
 
     public abstract boolean can_lift(Date today);
+
+    public int getSkiPassID() {
+        return slope.getSkiPassID();
+    }
+
 
 }

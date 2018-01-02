@@ -9,6 +9,10 @@ public class SlopeForDays implements StrategySlope {
         day_end = today.add_day(ksp.toInt());
     }
 
+    public int getSkiPassID() {
+        return skiPass.getId();
+    }
+
     @Override
     public boolean can_go_up(Date today) {
         return !skiPass.isBan() && today.before(day_end);

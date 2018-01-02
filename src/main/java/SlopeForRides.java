@@ -1,4 +1,5 @@
 public class SlopeForRides implements StrategySlope {
+
     private SkiPass skiPass;
     private KindSkiPass kindSkiPass;
     private int slides_left;
@@ -11,7 +12,11 @@ public class SlopeForRides implements StrategySlope {
         slides_left = ksp.toInt();
     }
 
-    public int getSlides_left() {
+    public int getSkiPassID() {
+        return skiPass.getId();
+    }
+
+    int getSlides_left() {
         return slides_left;
     }
 
@@ -22,7 +27,7 @@ public class SlopeForRides implements StrategySlope {
 
     @Override
     public String end_skipass() {
-        return "You have " + slides_left + " slides left, till end of " + date_start;
+        return "You have " + getSlides_left() + " slides left, till end of " + date_start;
     }
 
     public void minus() {

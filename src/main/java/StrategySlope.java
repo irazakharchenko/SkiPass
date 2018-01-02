@@ -4,4 +4,7 @@ public interface StrategySlope {
     String end_skipass();
 
     void minus();
+
+    int getSkiPassID();
+
 }
