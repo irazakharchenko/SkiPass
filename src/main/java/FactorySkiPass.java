@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 class FactorySkiPass {
-    private ArrayList<SkiPass> mass = new ArrayList<>();
+    private ArrayList<StrategyTypeDays> mass = new ArrayList<>();
 
     FactorySkiPass() {
 
@@ -67,8 +67,13 @@ class FactorySkiPass {
 
         }
         if (weekends) {
-            return new SkiPassWeekends(ksp, today);
+            StrategyTypeDays std = new SkiPassWeekends(ksp, today);
+            mass.add(std);
+            return std;
         }
-        return new SkiPassWorkDays(ksp, today);
+        StrategyTypeDays std = new SkiPassWorkDays(ksp, today);
+        mass.add(std);
+        return std;
+
     }
 }

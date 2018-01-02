@@ -9,6 +9,7 @@ public class DateTest {
     public void before() throws Exception {
         assertEquals(true, d1.before(d));
         assertEquals(false, d.before(d1));
+        assertEquals(true, d.before(d));
     }
 
 }
