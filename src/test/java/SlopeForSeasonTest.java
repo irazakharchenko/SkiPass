@@ -12,7 +12,7 @@ public class SlopeForSeasonTest {
         d1 = d.add_season();
         assertEquals("You can slide till " + d1, ss.end_skipass());
         ss.minus();
-        // if we run all tests ID will be 12 and 13 if only this one, 0 and 1
+        // if we run all tests ID will be 13 and 14 if only this one, 0 and 1
         assertEquals(true, 13 <= ss.getSkiPassID() || ss.getSkiPassID() == 0);
         assertEquals(true, 14 <= s.getSkiPassID() || s.getSkiPassID() == 1);
     }

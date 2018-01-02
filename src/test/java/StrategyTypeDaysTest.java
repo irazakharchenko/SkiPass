@@ -10,7 +10,7 @@ public class StrategyTypeDaysTest {
     @Test
     public void end_skipass() throws Exception {
         assertEquals("You have 10 slides left, till end of 1/1/2018", std.end_skipass());
-        // if we run all tests ID will be 12 and 13 if only this one, 0 and 1
+        // if we run all tests ID will be 14 and 15 if only this one, 0 and 1
         assertEquals(true, 14 <= std.getSkiPassID() || std.getSkiPassID() == 0);
         assertEquals(true, 15 <= std1.getSkiPassID() || std1.getSkiPassID() == 1);
         std.minus();
